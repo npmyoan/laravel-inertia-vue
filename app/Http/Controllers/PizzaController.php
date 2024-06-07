@@ -24,4 +24,19 @@ class PizzaController extends Controller
             'pizza' => $pizza,
         ]);
     }
+    public function update(Pizza $pizza, Request $request): void
+    {
+        $request->validate([
+            'size' => 'string',
+            'crust' => 'string',
+            'status' => 'string',
+            'toppings' => 'array',
+        ]);
+
+
+
+        $pizza->update($request->validated());
+
+        route('pizza.index');
+    }
 }
