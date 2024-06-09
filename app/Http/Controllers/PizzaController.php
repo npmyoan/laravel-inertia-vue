@@ -17,10 +17,9 @@ class PizzaController extends Controller
         ]);
     }
 
-    public  function edit(Pizza $pizza): Response
+    public function edit(Pizza $pizza)
     {
-
-        return Inertia::render('Pizza/Edit', [
+        return Inertia::render('Pizzas/Edit', [
             'pizza' => $pizza,
         ]);
     }
