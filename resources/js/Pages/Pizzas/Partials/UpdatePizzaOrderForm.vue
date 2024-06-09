@@ -1,20 +1,9 @@
-/** export default function UpdatePizzaOrderForm({ pizza, className = '' }) {
-return (
-<section className="{className}">
-
-
-
-        </section>
-); } */
-
 <script setup>
 import InputError from "@/Components/InputError.vue";
 import InputLabel from "@/Components/InputLabel.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
-import { Link, useForm, usePage } from "@inertiajs/vue3";
-
-// import SelectInput from "@/Components/SelectInput.vue";
+import {  useForm } from "@inertiajs/vue3";
 
 const props = defineProps({
     pizza: {
@@ -32,8 +21,9 @@ const form = useForm({
     // toppings: props.pizza.toppings.join(","),
     status: props.pizza.status ?? "",
 });
+
 const onSubmit = () => {
-    form.patch(route("pizzas.update", props.pizza.id), {
+    form.patch(route("pizzas.update", props.pizza.id, form), {
         onSuccess: () => form.reset("password"),
     });
 };
