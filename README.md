@@ -1,6 +1,6 @@
 # Proyecto de Laravel + Inertia + Vue3
 
-En este proyecto se puso un poco en práctica lo aprendido de laravel a nivel de relaciones y basesw de datos con eloquent, también un poco de manejos de rutas controllers y sobre todo la integración de vue3 a travez de Inertiajs
+En este proyecto se puso un poco en práctica lo aprendido de laravel a nivel de relaciones y bases de datos con eloquent, también un poco de manejos de rutas controllers y sobre todo la integración de vue3 a travez de Inertiajs
 
 ## Como levantar el proyecto en desarrollo
 
